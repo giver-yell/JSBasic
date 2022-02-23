@@ -1,5 +1,15 @@
 'use strict';
 
+// スコープ
+const x = 2;         // グローバススコープ
+function f() {
+    const x = 1;
+    console.log(x);  // 1
+}
+f();
+console.log(x);      // 2
+
+
 // アロー関数
 // 引数が1つの場合は()を省略可能
 const double = a => a * 2;
