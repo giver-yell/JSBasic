@@ -1,11 +1,15 @@
 'use strict';
 
+// アロー関数
+// 引数が1つの場合は()を省略可能
+const double = a => a * 2;
+console.log(double(12));
 
-
+const sum = (a, b, c) => a + b + c;
 // 関数式
-const sum = function (a, b, c) {
-    return a + b + c;
-};
+// const sum = function (a, b, c) {
+//     return a + b + c;
+// };
 const total = sum(1, 2, 3) + sum(4, 5, 6);
 console.log(total);
 
