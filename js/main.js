@@ -4,7 +4,20 @@
     // 配列
     // スプレッド構文
     const otherScores = [10, 20];
-    const scores = [80, 90, 40, ...otherScores];
+    const scores = [80, ...otherScores];
+
+    // 分割代入
+    const [a, ...others] = scores;
+    console.log(a);
+    console.log(others);
+
+    let x = 30;
+    let y = 70;
+    [x, y] = [y, x];
+    console.log(x);
+    console.log(y);
+
+
     console.log(scores);
 
     function sum(a, b) {
