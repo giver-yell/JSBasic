@@ -2,6 +2,14 @@
 
 
 
+// 関数式
+const sum = function(a, b, c) {
+    return a + b + c;
+}
+const total = sum(1, 2, 3) + sum(4, 5, 6);
+console.log(total);
+
+
 // boolean
 // false <- 0 , null, undefined, '', false
 // true  <- それ以外
