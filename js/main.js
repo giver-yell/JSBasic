@@ -1,9 +1,32 @@
 'use strict';
 
-console.log('Hello World from main.js!');
+
+
+// boolean
+// false <- 0 , null, undefined, '', false
+// true  <- それ以外
+
+// 数字からなる文字列
+console.log('5' * 3);                   // 15
+console.log('5' - '3');                 //  2
+
+console.log('5' + 3);                   // 53
+console.log(parseInt('5', 10) + 3);     //  8
+
+console.log(parseInt('hello', 10) + 3); //  NaN (Not a number)
+
+
+// 型
+console.log(typeof 'hello');
+console.log(typeof 5);
+console.log(typeof true);
+console.log(typeof undefined);
+// nullのtypeがobjectになるのはJSの有名なバグ
+console.log(typeof null);
+
 
 // 'の利用
 console.log('it\'s me');
 console.log("it's me");
-
+// 改行、タブ
 console.log('Hel\nlo Wo\trld');
