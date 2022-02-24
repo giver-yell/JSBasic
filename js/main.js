@@ -11,7 +11,7 @@
     // foreach
     scores.forEach((score, index) => {
         console.log(`Score ${index}: ${score}`);
-    })
+    });
 
     // 分割代入
     const [a, ...others] = scores;
