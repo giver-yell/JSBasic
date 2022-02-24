@@ -1,10 +1,17 @@
+/*
+ * 配列
+*/
 'use strict';
 
 {
-    // 配列
     // スプレッド構文
     const otherScores = [10, 20];
     const scores = [80, ...otherScores];
+
+    // foreach
+    scores.forEach((score, index) => {
+        console.log(`Score ${index}: ${score}`);
+    })
 
     // 分割代入
     const [a, ...others] = scores;
