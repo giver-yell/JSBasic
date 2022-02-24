@@ -4,6 +4,11 @@
 'use strict';
 
 {
+    // map 配列に処理を加えて配列へ格納
+    const prices = [180, 190, 200];
+    const updatedPrices = prices.map(price => price + 20);
+    console.log(updatedPrices);
+
     // スプレッド構文
     const otherScores = [10, 20];
     const scores = [80, ...otherScores];
