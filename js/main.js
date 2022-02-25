@@ -1,44 +1,26 @@
-/*
- * オブジェクト
- */
 'use strict'
 
 {
-    const otherProps = {
-        r: 4,
-        color: 'red',
-    };
+    // 文字列の操作
 
-    const point = {
-        x: 100,
-        y: 180,
-        ...otherProps,
-    };
 
-    const keys = Object.keys(point);
-    keys.forEach(key => {
-        console.log(`Key: ${key}, Value: ${point[key]}`);
-    });
+    // 変数
+    let x = 1;
+    let y = x;
+    x = 5;
+    console.log(x); // 5
+    console.log(y); // 1
 
-    const points = [
-        { x: 30, y: 10 },
-        { x: 10, y: 40 },
-    ];
-    console.log(points[1].y);
+    // 配列とobjectは値が大きくなる可能性があるのでメモリの位置を見に行く
+    let a = [1, 2];
+    let b = a;
+    a[0] = 5;
+    console.log(a); // [5, 2]
+    console.log(b); // [1, 2]
 
-    console.log(point);
-
-    const { x, r, ...others } = point;
-    console.log(x);
-    console.log(r);
-    console.log(others);
-
-    point.x = 120;
-
-    console.log(point.x);
-    console.log(point['y']);
-
-    point.z = 90;
-    delete point.y;
-    console.log(point);
+    let c = [1, 2];
+    let d = [...c];
+    c[0] = 5;
+    console.log(c); // [5, 2]
+    console.log(d); // [1, 2]
 }
