@@ -4,6 +4,11 @@
 'use strict';
 
 {
+    // filter
+    const numbers = [1, 4, 7, 8, 10];
+    const evenNumbers = numbers.filter(number => number % 2 === 0);
+    console.log(evenNumbers);
+
     // map 配列に処理を加えて配列へ格納
     const prices = [180, 190, 200];
     const updatedPrices = prices.map(price => price + 20);
