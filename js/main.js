@@ -2,6 +2,23 @@
 
 {
     // 文字列の操作
+    const date = [2022, 2, 26];
+    console.log(date.join('/')); // 2022/2/26
+    console.log(date.join('')); 2022226
+
+    const t = '12:13:04';
+    console.log(t.split(':')); // [12, 13, 04]
+    const [hour, minute, second] = t.split(':');
+    console.log(hour);
+    console.log(minute);
+    console.log(second);
+
+    const str = 'hello';
+    // length
+    console.log(str.length); // 5
+    // str.substring([開始位置, 終了位置]);
+    console.log(str.substring(2, 4)); // ll
+    console.log(str[1]); // e
 
 
     // 変数
