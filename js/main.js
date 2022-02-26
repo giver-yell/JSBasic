@@ -24,4 +24,14 @@
     // 数値をランダムで生成(ゲーム制作で必須)
     console.log(Math.random());
 
+    // ランダムな整数値
+    /*
+     * 0, 1, 2
+     * Math.floor(Math.random() * 3);
+     * 0, ..., n
+     * Math.floor(Math.random() * (n + 1));
+     * min, ...., Max
+     * Math.floor(Math.random() * (Max + 1 - Min)) + Min;
+     */
+    console.log(Math.floor(Math.random() * (3 + 1 - 1)) + 1);
 }
