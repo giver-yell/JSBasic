@@ -4,6 +4,7 @@
 'use strict'
 
 {
+    // setTimeoutは処理終了後にカウントが開始されるので、サーバー負荷を考えて採用される場合が多い
     // タイマー機能 setInterval, setTimeout
     let i = 0;
 
