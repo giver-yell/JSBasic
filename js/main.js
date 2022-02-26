@@ -4,6 +4,14 @@
 'use strict'
 
 {
+    const date = new Date(2019, 10); // 2019/11/01 00:00:00
+    date.setHours(10, 20, 30);       // 2019/11/01 10:20:30
+    // setDateで行き過ぎても自動で計算してくれる
+    date.setDate(31); // 2019/12/01 10:20:30
+    // 3日後
+    date.setDate(date.getDate() + 3); // 2019/12/04 10:20:30
+    console.log(date);
+
     const d = new Date();
     console.log(d);
 
