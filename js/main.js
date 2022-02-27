@@ -9,7 +9,16 @@
         // 要素の複製
         const item0 = document.querySelectorAll('li')[0];
         const item1 = document.querySelectorAll('li')[1];
+        const item2 = document.createElement('li');
         const ul    = document.querySelector('ul');
+        const li    = document.createElement('li');
+        const text = document.querySelector('input');
+        li.textContent = text.value;
+        document.querySelector('ul').appendChild(li);
+
+        text.value = '';
+        text.focus();
+
         // trueで要素の中身はコピーしない
         const copy = item0.cloneNode(true);
 
@@ -17,7 +26,6 @@
 
 
         // 要素の追加
-        const item2 = document.createElement('li');
         item2.textContent = 'item 2';
 
         ul.appendChild(item2);
