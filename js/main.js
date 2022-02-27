@@ -6,6 +6,13 @@
     document.querySelector('button').addEventListener('click', () => {
         const targetNode = document.getElementById('target');
 
+        // 要素の追加
+        const item2 = document.createElement('li');
+        item2.textContent = 'item 2';
+
+        const ul = document.querySelector('ul');
+        ul.appendChild(item2);
+
         targetNode.title = 'This is title!';
 
         // style
@@ -15,8 +22,11 @@
         // } else {
         //     targetNode.classList.add('my-color');
         // }
+
+        // classの変更
         targetNode.classList.toggle('my-color');
 
+        // data-* の追加
         targetNode.textContent = targetNode.dataset.translation;
 
 
