@@ -14,6 +14,18 @@
         const li    = document.createElement('li');
         const text  = document.querySelector('input');
         const color = document.querySelector('select');
+        const colors = document.querySelectorAll('input');
+        let selectedColor;
+
+        // radioボタン操作
+        colors.forEach(color => {
+            if (color.checked === true) {
+                selectedColor = color.value;
+            }
+        });
+        item0.textContent = selectedColor;
+        ul.appendChild(item0);
+
 
         // select操作
         li.textContent = `${color.value} - ${color.selectedIndex}`;
