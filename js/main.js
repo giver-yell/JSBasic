@@ -24,6 +24,12 @@
 
         targetNode.title = 'This is title!';
 
+        // 要素の削除
+        // 親Node.removeChild(削除するNode);
+        document.querySelector('ul').removeChild(item1);
+        // remove() は使えないブラウザあり
+        // item1.remove();
+
         // style
         // targetNode.className = 'my-color';
         // if (targetNode.classList.contains('my-color') === true) {
