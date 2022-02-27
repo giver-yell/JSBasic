@@ -6,11 +6,20 @@
     document.querySelector('button').addEventListener('click', () => {
         const targetNode = document.getElementById('target');
 
+        // 要素の複製
+        const item0 = document.querySelectorAll('li')[0];
+        const item1 = document.querySelectorAll('li')[1];
+        const ul    = document.querySelector('ul');
+        // trueで要素の中身はコピーしない
+        const copy = item0.cloneNode(true);
+
+        ul.insertBefore(copy, item1);
+
+
         // 要素の追加
         const item2 = document.createElement('li');
         item2.textContent = 'item 2';
 
-        const ul = document.querySelector('ul');
         ul.appendChild(item2);
 
         targetNode.title = 'This is title!';
