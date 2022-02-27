@@ -10,21 +10,34 @@
         const item0 = document.querySelectorAll('li')[0];
         const item1 = document.querySelectorAll('li')[1];
         const item2 = document.createElement('li');
+        const item3 = document.querySelectorAll('li')[3];
         const ul    = document.querySelector('ul');
         const li    = document.createElement('li');
         const text  = document.querySelector('input');
         const color = document.querySelector('select');
         const colors = document.querySelectorAll('input');
         let selectedColor;
+        const selectedColors = [];
 
-        // radioボタン操作
+        // select box
         colors.forEach(color => {
             if (color.checked === true) {
-                selectedColor = color.value;
+                selectedColors.push(color.value);
             }
         });
-        item0.textContent = selectedColor;
-        ul.appendChild(item0);
+        // item0.textContent = selectedColors.join(',');
+        item3.textContent = selectedColors;
+        ul.appendChild(item3);
+
+
+        // radioボタン操作
+        // colors.forEach(color => {
+        //     if (color.checked === true) {
+        //         selectedColor = color.value;
+        //     }
+        // });
+        // item0.textContent = selectedColor;
+        // ul.appendChild(item0);
 
 
         // select操作
