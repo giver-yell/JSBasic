@@ -12,9 +12,16 @@
         const item2 = document.createElement('li');
         const ul    = document.querySelector('ul');
         const li    = document.createElement('li');
-        const text = document.querySelector('input');
-        li.textContent = text.value;
-        document.querySelector('ul').appendChild(li);
+        const text  = document.querySelector('input');
+        const color = document.querySelector('select');
+
+        // select操作
+        li.textContent = `${color.value} - ${color.selectedIndex}`;
+        ul.appendChild(li);
+
+        // li操作
+        item0.textContent = text.value;
+        document.querySelector('ul').appendChild(item0);
 
         text.value = '';
         text.focus();
