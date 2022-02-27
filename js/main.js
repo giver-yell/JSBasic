@@ -8,9 +8,19 @@
 
         targetNode.textContent = 'Changed';
         targetNode.title = 'This is title!';
-        targetNode.style.color = 'red';
+
+        // style
+        // targetNode.className = 'my-color';
+        // if (targetNode.classList.contains('my-color') === true) {
+        //     targetNode.classList.remove('my-color');
+        // } else {
+        //     targetNode.classList.add('my-color');
+        // }
+        targetNode.classList.toggle('my-color');
+
+        // targetNode.style.color = 'red';
         // ハイフン区切りはキャメルケースに
-        targetNode.style.backgroundColor = 'skyblue';
+        // targetNode.style.backgroundColor = 'skyblue';
     });
 
 
