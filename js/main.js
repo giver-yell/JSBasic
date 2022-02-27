@@ -5,7 +5,10 @@
         console.log('Double click!');
     })
 
-    document.addEventListener('mousemove', () => {
-        console.log('moved!');
+    // document.addEventListener('mousemove', e => {
+    //     console.log(e.clientX, e.clientY);
+    // });
+    document.addEventListener('keydown', e => {
+        console.log(e.key);
     });
 }
