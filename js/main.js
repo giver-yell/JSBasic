@@ -6,7 +6,6 @@
     document.querySelector('button').addEventListener('click', () => {
         const targetNode = document.getElementById('target');
 
-        targetNode.textContent = 'Changed';
         targetNode.title = 'This is title!';
 
         // style
@@ -17,6 +16,10 @@
         //     targetNode.classList.add('my-color');
         // }
         targetNode.classList.toggle('my-color');
+
+        targetNode.textContent = targetNode.dataset.translation;
+
+
 
         // targetNode.style.color = 'red';
         // ハイフン区切りはキャメルケースに
