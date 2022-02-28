@@ -1,60 +1,57 @@
-/*
- * class
-*/
 'use strict'
 
 {
-    class Post { // 親クラス
-        constructor(text) {
-            this.text      = text;
-            this.likeCount = 0;
+    // イベントの伝播
+    document.querySelector('ul').addEventListener('click', e => {
+        if (e.target.nodeName === 'LI') {
+            e.target.classList.toggle('done');
         }
+    })
 
-        show() {
-            console.log(`${this.text} - ${this.likeCount}いいね`);
-        }
+    // form
+    // リロードを中止
+    document.querySelector('form').addEventListener('submit', e => {
+        e.preventDefault();
+        console.log('submit');
+    })
 
-        like() {
-            this.likeCount++;
-            this.show();
-        }
+    // textarea
+    const text = document.querySelector('textarea');
 
-        // 静的メソッド
-        // thisは使えない
-        static showInfo() {
-            console.log('Post class version1.0');
-        }
-    }
+    // focus
+    text.addEventListener('focus', () => {
+        console.log('focus');
+    })
 
+    // blur(focusを外す)
+    text.addEventListener('blur', () => {
+        console.log('blur');
+    })
 
-    // 継承
-    class SponsoredPost extends Post { // 子クラス
-        constructor(text, sponsor) {
-            // 親クラスのinstance呼びだし
-            super(text);
+    // input
+    text.addEventListener('input', () => {
+        // console.log('input');
+        console.log(text.value.length);
+    })
 
-            this.sponsor   = sponsor;
-        }
-
-        show() {
-            super.show();
-            console.log(`...sponsored by ${this.sponsor}`);
-        }
-    }
-
+    // change(input確定)
+    text.addEventListener('change', () => {
+        console.log('change');
+    })
 
 
-    const posts = [
-        new Post('JavaScript勉強中'),
-        new Post('プログラミング楽しい'),
-        new SponsoredPost('3分動画でマスターしよう', 'movie'),
-    ];
+    // ダブルクリック
+    document.querySelector('button').addEventListener('dblclick', () => {
+        console.log('Double click!');
+    })
 
-    posts[2].show();
-    posts[2].like();
+    // マウス操作
+    // document.addEventListener('mousemove', e => {
+    //     console.log(e.clientX, e.clientY);
+    // });
 
-    posts[0].like();
-    // posts[0].show();
-
-    Post.showInfo();
+    // キーボード操作
+    // document.addEventListener('keydown', e => {
+    //     console.log(e.key);
+    // });
 }
