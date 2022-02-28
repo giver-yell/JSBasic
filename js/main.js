@@ -1,6 +1,14 @@
 'use strict'
 
 {
+    // form
+    // リロードを中止
+    document.querySelector('form').addEventListener('submit', e => {
+        e.preventDefault();
+        console.log('submit');
+    })
+
+    // textarea
     const text = document.querySelector('textarea');
 
     // focus
@@ -23,8 +31,6 @@
     text.addEventListener('change', () => {
         console.log('change');
     })
-
-
 
 
     // ダブルクリック
