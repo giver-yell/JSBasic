@@ -23,7 +23,8 @@
     const options = {
         // imgの表示 % を指定
         // threshold: [0.2, 0.8],
-        threshold: 0.2,
+        threshold: 1,
+        rootMargin: '0px 0px -100px',
     }
 
     const observer = new IntersectionObserver(callback, options);
