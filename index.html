@@ -12,9 +12,21 @@
         .my-border {
             border-bottom: 4px solid orange;
         }
+
+        li {
+            cursor: pointer;
+        }
+        li.done {
+            text-decoration: line-through;
+        }
     </style>
 </head>
 <body>
+    <ul> <!-- e.currentTarget -->
+        <li>Todo</li>
+        <li>Todo</li> <!-- e.target -->
+        <li>Todo</li>
+    </ul>
 
     <form>
         <input type="text">
@@ -42,12 +54,12 @@
     <input type="text">
     <button>Run</button>
 
-    <ul>
+    <!-- <ul>
         <li>item 0</li>
         <li>item 1</li>
         <li>item 2</li>
         <li>item 3</li>
-    </ul>
+    </ul> -->
 
     <h1 id="target" class="my-border" data-translation="header" title="見出しです!">ヘッダー</h1>
     <p>こんにちは。こんにちは。</p>

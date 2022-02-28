@@ -1,6 +1,13 @@
 'use strict'
 
 {
+    // イベントの伝播
+    document.querySelector('ul').addEventListener('click', e => {
+        if (e.target.nodeName === 'LI') {
+            e.target.classList.toggle('done');
+        }
+    })
+
     // form
     // リロードを中止
     document.querySelector('form').addEventListener('submit', e => {
