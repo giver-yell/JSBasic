@@ -9,12 +9,24 @@
     <!-- Reactの結果をブラウザのDOMへ反映させるライブラリ -->
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <!-- Don't use this in production: -->
-    <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
+    <div id="root"></div>
+
     <script type="text/babel">
+        (() => {
 
+            const name = 'taguchi';
+            ReactDOM.render(
+                <div>
+                    <p>Hello!! {name.toUpperCase()}</p>
+                    <hr/>
+                    <p>world</p>
+                </div>,
+                document.getElementById('root')
+            );
+        })();
     </script>
-
 </body>
 </html>
